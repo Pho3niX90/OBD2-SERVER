@@ -63,7 +63,7 @@ $array = (array) json_decode($rawData,true);
           $submitval = 1;
 		  
 		    if (!in_array($k2, $dbfields) and $submitval == 1) {
-            $sqlalter = "ALTER TABLE $db_table ADD $k2 VARCHAR(255) NOT NULL default '0'";
+            $sqlalter = "ALTER TABLE $db_table ADD $k2 VARCHAR(255) default '0'";
             mysql_query($sqlalter, $con) or die(mysql_error());
 			
         } 
